@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 
 const router = require("express").Router();
 
-const Users = require("../users/users-model.js");
+const Users = require("../models/users-model.js");
 
 
 const constants = require("../config/constants.js");
@@ -46,7 +46,7 @@ router.post("/login", (req, res) => {
                 if (user && bcryptjs.compareSync(password, user.password)) {
                     const token = createToken(user);
 
-                    res.status(200).json({ token, message: "Welcome to the dad jokes API" });
+                    res.status(200).json({ token, message: "Welcome to the Secret Family Recipes API" });
                 } else {
                     res.status(401).json({ message: "Invalid credentials" });
                 }
@@ -70,7 +70,6 @@ function isValid(user) {
 function createToken(user) {
     const payload = {
         subject: user.id,
-        name: user.name,
         username: user.username,
 
 
