@@ -1,16 +1,18 @@
 const express = require('express');
 const server = express();
 const helmet = require('helmet');
-const recipeRouter = require('../routes/recipes-router.js');
-const userRouter = require('../routes/users-router.js');
-const ingredientRouter = require('../routes/ingredients-router.js');
-const instructionRouter = require('../routes/instructions-router.js');
+const recipeRouter = require('../routers/recipes-router.js');
+const userRouter = require('../routers/users-router.js');
+const ingredientRouter = require('../routers/ingredients-router.js');
+const instructionRouter = require('../routers/instructions-router.js');
 const auth = require('../auth/auth-middleware.js');
+const authRouter = require('../auth/auth-router.js');
 
 server.use(helmet());
 server.use(express.json());
-server.use(cors());
-//server.use('/uploads', express.static('uploads'))
+
+
+server.use('/auth', authRouter);
 server.use('/users', userRouter);
 server.use('/ingredients', ingredientRouter);
 server.use('/instructions', instructionRouter);

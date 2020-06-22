@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 
 const router = require("express").Router();
 
-const Users = require("../users/users-model.js");
+const Users = require("../models/users-model.js");
 
 
 const constants = require("../config/constants.js");
@@ -70,7 +70,6 @@ function isValid(user) {
 function createToken(user) {
     const payload = {
         subject: user.id,
-        name: user.name,
         username: user.username,
 
 
