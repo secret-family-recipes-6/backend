@@ -21,6 +21,8 @@
 | View Recipe by Id    | /recipes/:id             | GET    | view specific recipe |
 | View Specific Recipe | /recipes/:id/ingredients | GET    | View specific recipe |                                                         
 | ingredients          |                          |        | ingredients          |
+| View Specific Recipe | /recipes/:id/instructions| GET    | View specific recipe |                                                         
+| instructions         |                          |        | instructions         |
 | Add Recipe           | /recipes                 | POST   | added recipe         |
 | Edit Recipe          | /recipes/:id             | PUT    | updated recipe       |
 | Delete Recipe        | /recipes/:id             | DELETE | deleted Recipe       |
