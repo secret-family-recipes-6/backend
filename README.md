@@ -19,7 +19,8 @@
 | :------------------- | :----------------        | :----- | :---------------     |
 | View All Recipes     | /recipes                 | GET    | List of recipes      |
 | View Recipe by Id    | /recipes/:id             | GET    | view specific recipe |
-| View Specific Recipe | /recipes/:id/ingredients | GET    | View specific recipe |                                                         
+| from a given user    | /recipes/user/:id        | GET    | all recipes from user|      
+| View Specific Recipe | /recipes/:id/ingredients | GET      specific recipe      |                                                         
 | ingredients          |                          |        | ingredients          |
 | View Specific Recipe | /recipes/:id/instructions| GET    | View specific recipe |                                                         
 | instructions         |                          |        | instructions         |
