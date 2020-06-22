@@ -20,7 +20,7 @@
 | View All Recipes     | /recipes                 | GET    | List of recipes      |
 | View Recipe by Id    | /recipes/:id             | GET    | view specific recipe |
 | View Specific Recipe | /recipes/:id/ingredients | GET    | View specific recipe |                                                         
-| ingredients                                                ingredients
+| ingredients          |                          |        | ingredients          |
 | Add Recipe           | /recipes                 | POST   | added recipe         |
 | Edit Recipe          | /recipes/:id             | PUT    | updated recipe       |
 | Delete Recipe        | /recipes/:id             | DELETE | deleted Recipe       |
