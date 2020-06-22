@@ -15,7 +15,7 @@
 
 
 ## RECIPES
-
+| Action               | URL                      | Method | Response             |
 | View All Recipes     | /recipes                 | GET    | List of recipes      |
 | View Recipe by Id    | /recipes/:id             | GET    | view specific recipe |
 | View Specific Recipe | /recipes/:id/ingredients | GET    | View specific recipe |                                                         
@@ -27,7 +27,7 @@
 
 ## INGREDIENTS
 
-
+| Action               | URL              | Method | Response                |
 | View All Ingredients | /ingredients     | GET    | array of ingredients    |
 | View Ingredient by Id| /ingredients/:id | GET    | view specific ingredient|
 | Add Ingredient       | /ingredients     | POST   | added ingredients       |
@@ -37,7 +37,7 @@
 
 ## INSTRUCTIONS
 
-
+| Action                 | URL               | Method | Response                 |
 | View All Instructions  | /instructions     | GET    | array of instructions    |
 | View Instruction by Id | /instructions/:id | GET    | view specific instruction|
 | Add Instructions       | /instructions     | POST   | added instruction        |
