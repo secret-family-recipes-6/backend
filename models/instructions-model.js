@@ -13,17 +13,17 @@ function find() {
     return db('instructions');
 };
 
-function findById(instruction_number) {
+function findById(id) {
     return db('instructions')
-        .where({ instruction_number })
+        .where({ id })
         .first();
 };
 
-function findByRecipe(recipeId) {
+function findByRecipe(id) {
     return db('instructions as i')
-        .join('recipes as r', 'i.recipe_id', 'r.recipe_id')
-        .select('i.recipe_id', 'i.instruction_number', 'i.instruction')
-        .where('r.recipe_id', recipeId);
+        .join('recipes as r', 'i.recipe_id', 'r.id')
+        .select('i.recipe_id', 'i.instruction')
+        .where('r.id', id);
 };
 
 async function add(instruction) {
@@ -36,14 +36,14 @@ async function add(instruction) {
     }
 };
 
-function remove(instruction_number) {
+function remove(id) {
     return db('instructions')
-        .where('instruction_number', Number(instruction_number))
+        .where('id', Number(id))
         .del();
 };
 
-function update(instruction_number, changes) {
+function update(id, changes) {
     return db('instructions')
-        .where('instruction_number', Number(instruction_number))
+        .where('id', Number(id))
         .update(changes);
 }

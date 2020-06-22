@@ -115,6 +115,7 @@ router.get('/:id/ingredients', (req, res) => {
 });
 
 
+//get recipe's intructions
 
 router.get('/:id/instructions', (req, res) => {
     Instructions.findByRecipe(req.params.id)
