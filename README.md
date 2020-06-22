@@ -63,8 +63,19 @@ A user has:
 A recipe has:
 
 - a unique `id` - Not needed, creates by itself and auto increments
-- title - required 
-- user_id 
+- title - 
 - source
 - category 
 - recipe_img
+
+ingredients have:
+
+- a unique `id` - Not needed, creates by itself and auto increments
+- ingredient
+
+Instructions have: 
+
+- a unique `id` - Not needed, creates by itself and auto increments
+- instruction
+
+
