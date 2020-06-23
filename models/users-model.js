@@ -8,7 +8,7 @@ module.exports = {
 };
 
 function find() {
-    return db("users").select("id", "username").orderBy("id");
+    return db("users").select("id", "first_name", "last_name", "username").orderBy("id");
 }
 
 // return the role name together with the user data
