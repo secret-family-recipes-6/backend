@@ -113,6 +113,41 @@ describe('Test Auth endpoints ', () => {
     })
 
 
+
+    //GETS ALL RECIPES FROM A SPECIFIC USER
+
+    describe('GET /recipes/users/:id', () => {
+        it('should return 200 success because token is passed', async () => {
+            await supertest(server)
+                .post('/auth/register')
+                .send({
+                    first_name: "Guillermo",
+                    last_name: "Alfaro",
+                    username: "guillermo123",
+                    password: "123",
+                    email: "xxx@xxx.com"
+
+                })
+            const loginResponse = await supertest(server)
+                .post('/auth/login')
+                .send({
+                    username: "guillermo123",
+                    password: "123",
+                })
+
+            const id = await loginResponse.body.id
+
+            const response = await supertest(server)
+                .get(`/recipes/users/${id}`)
+
+                .set({ Authorization: loginResponse.body.token })
+            expect(response.status).toBe(200)
+
+
+        })
+
+    })
+
     // ADDS A RECIPE
 
     describe('GET /recipes', () => {
