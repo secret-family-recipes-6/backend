@@ -18,27 +18,12 @@ function find() {
 };
 
 
-
-
-
 function findById(id) {
     return db('recipes')
         .first()
         .where({ id })
 
 };
-
-
-// .join('ingredients', 'ingredients.recipe_id', 'recipes.id')
-//         .where('recipes.id', id)
-//         .select('ingredients.ingredient')
-
-
-// SELECT title, ingredient, instruction
-// FROM INGREDIENTS as i
-// JOIN RECIPES as r ON i.recipe_id = r.id
-// JOIN INSTRUCTIONS as ins ON ins.recipe_id = r.id
-
 
 
 function findByUser(user_id) {

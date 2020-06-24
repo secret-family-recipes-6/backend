@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const Recipes = require('../models/recipes-model.js');
 const auth = require('../auth/auth-middleware.js');
-const Ingredients = require('../models/ingredients-model.js');
-const Instructions = require('../models/instructions-model.js');
+
 
 
 
@@ -90,7 +89,7 @@ router.delete('/:id', (req, res) => {
     Recipes.remove(id)
         .then(deleted => {
             if (deleted) {
-                res.json({ removed: deleted });
+                res.json({ removed: 'Recipe Deleted Sucessfully' });
             } else {
                 res.status(404).json({ message: 'Could not find recipe with given id' });
             }
