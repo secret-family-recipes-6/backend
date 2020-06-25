@@ -12,8 +12,7 @@ exports.seed = function (knex) {
           category: 'Pasta',
           recipe_img: 'https://www.saudereggs.com/content/uploads/2018/06/creamy-bacon-carbonara.jpg',
           ingredients:
-            "'1 tablespoon olive oil', '6 or 7 slices of bacon, cut into 1/2-inch pieces', '1 small yellow onion, chopped into tiny pieces,'5 cloves of garlic, cut into thin slices', '1 teaspoon black pepper', '1 1/2 teaspoon parsley', '10-12 ounces pasta (linguine, fettuccine, or spaghetti)','1 cup grated parmesan plus more as needed','2 egg yolks','The grated zest and juice of 1 lemon','Salt to taste'"
-
+            "'1 tablespoon olive oil, 6 or 7 slices of bacon, cut into 1/2-inch pieces, 1 small yellow onion, chopped into tiny pieces,5 cloves of garlic, cut into thin slices, 1 teaspoon black pepper, 1 1/2 teaspoon parsley, 10-12 ounces pasta (linguine, fettuccine, or spaghetti), 1 cup grated parmesan plus more as needed, 2 egg yolks,The grated zest and juice of 1 lemon,Salt to taste"
           ,
           instructions:
             "'In a large frying pan, warm up the olive oil over medium heat. Cook the bacon, frequently stirring, until it is crispy — about three to five minutes. Add the onion and garlic. Cook them until they are soft, about five minutes. Add the pepper and parsley and cook another minute.','Meanwhile, cook the pasta according to the directions on the box. Cook the pasta al dente. When it’s done, remove 1 1/2 cups of the cooking liquid and set aside. Drain the remaining liquid.', 'Add the pasta to the frying pan along with 1/2 cup of the cooking liquid and 1/2 cup grated parmesan. Cook the pasta mixture until it is well-combined. Make sure the pasta is evenly coated.','Remove the frying pan from the heat and add the egg yolks. Toss the pasta mixture with the egg yolks until a smooth sauce evenly covers the pasta. Add more of the liquid if you need it.','Add the grated lemon zest, lemon juice, salt, and remaining grated parmesan.Toss the pasta again to coat it evenly.If the sauce is too thick, add more of the cooking liquid to loosen it up a little.','Divide the pasta among four bowls.Top each serving with more parmesan and lemon zest if desired.'",
@@ -33,6 +32,7 @@ exports.seed = function (knex) {
 
         {
           title: 'Southern-Style Egg Salad',
+          user_id: 1,
           source: 'Walter',
           category: 'Sandwich',
           recipe_img: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F8100470.jpg',
@@ -41,6 +41,7 @@ exports.seed = function (knex) {
         },
         {
           title: 'Honey Chicken Kabobs',
+          user_id: 3,
           source: 'Ann Marie',
           category: 'Grill',
           recipe_img: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1403054.jpg&w=596&h=596&c=sc&poi=face&q=85',
@@ -49,6 +50,7 @@ exports.seed = function (knex) {
         },
         {
           title: 'Pesto Grilled Cheese Sandwich',
+          user_id: 4,
           source: 'Uncle Ray',
           category: 'Sandwich',
           recipe_img: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F4543319.jpg',
@@ -57,6 +59,7 @@ exports.seed = function (knex) {
         },
         {
           title: 'Strawberry Oatmeal Breakfast Smoothie',
+          user_id: 5,
           source: 'Phoebe',
           category: 'Breakfast',
           recipe_img: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F959492.jpg&w=596&h=596&c=sc&poi=face&q=85',
@@ -66,6 +69,7 @@ exports.seed = function (knex) {
 
         {
           title: 'Lemon-Ricotta Cornmeal Waffles',
+          user_id: 2,
           source: 'Aunt Kim',
           category: 'Breakfast',
           recipe_img: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6879705.jpg',
